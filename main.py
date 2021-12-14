@@ -1,4 +1,4 @@
-Class = input('Which class do you want to look at? ')
+Class = input('Which class do you want to view? ')
 
 while Class != '7-03' and Class != '7-07' and Class != '7-10' and Class != '7-11' and Class != '7-12' and Class != '703' and Class != '707' and Class != '710' and Class != '711' and Class != '712':
   Class = input('Not a valid class, please try again: ')
