@@ -1,7 +1,6 @@
-import main;
+import json
 
-
-Money1 = main.openJson("Accounts2", "Danylo", 710, 14);
+Money1 = open("Accounts2/Money1.txt").read()
 Money2 = open("Accounts2/Money2.txt").read()
 Money3 = open("Accounts2/Money3.txt").read()
 Money4 = open("Accounts2/Money4.txt").read()
@@ -44,7 +43,10 @@ while True:
           passWord = input('What is the password? ')
           if passWord == 'OpenUp':
             print('Access Granted!')
-            print(Money1["balance"])
+            file = open('Accounts2/Money1.txt', 'w')
+            file.write(str(Money1))
+            file.close()
+            print(open("Accounts2/Money1.txt").read())
           else:
             print('Wrong! Access Denied!')
         elif Choice2 == '2':

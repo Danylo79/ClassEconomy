@@ -1,6 +1,8 @@
 import json
 import os.path;
 
+shouldDebug = True;
+
 level = input('Are you viewing (v) or editing (e)? ')
 Class = input('Which class do you want to view? ')
 
@@ -55,30 +57,38 @@ elif level == 'v':
   elif Class == '7-12' or Class == '712':
     import viewtwelve
 
-def openJson(folder, name, homeroom, studentId):
-  file = os.path.join(folder, name + "-" + str(homeroom) + "-" + str(studentId) + ".json");
+def openJson(folder, name, password, homeroom, studentId, isComittee):
+  if (not name == "NULL"):
+    file = os.path.join(folder, "data/" + name + "-" + str(homeroom) + "-" + str(studentId) + ".json");
 
-  if (not os.path.isfile(file)):
-    makeJson(file, folder, name, homeroom, studentId);
+    if (not os.path.isfile(file)):
+      makeJson(file, name, password, homeroom, studentId, isComittee);
 
-  with open(file) as readfile:
-    out = json.load(readfile)
-    print("Loading: " + out["name"]);
-    print("Full Json: " + json.dumps(out));
-    return out
+    with open(file) as readfile:
+      out = json.load(readfile)
+      debug("Loading: " + out["name"]);
+      debug("Full Json: " + json.dumps(out));
+      debug(" ")
+      return out
+  else:
+    debug("Skipping null user (" + str(homeroom) + "-" + str(studentId) + ")")
+  debug(" ")
 
 
-def makeJson(file, name, homeroom, studentId, isComittee):
+def makeJson(file, name, password, homeroom, studentId, isComittee):
   data = {
     "name": name,
+    "password": password,
     "homeroom": homeroom,
     "studentId": studentId,
     "balance": 0,
-    "jobs": [],
-    "isComittee": isComittee
+    "isComittee": isComittee,
+    "jobs": []
     }
 
-  jstr = json.dumps(data);
-
   with open(file, "w+") as outfile:
-    json.dump(jstr, outfile)
+    json.dump(data, outfile)
+
+def debug(msg):
+  if (shouldDebug):
+    print(msg);
