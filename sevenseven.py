@@ -22,12 +22,12 @@ Money21 = open("Accounts1/Money21.txt").read()
 Money22 = open("Accounts1/Money22.txt").read()
 Money23 = open("Accounts1/Money23.txt").read()
 Money24 = open("Accounts1/Money24.txt").read()
-Money25 = open("Accounts1/Money19.txt").read()
-Money26 = open("Accounts1/Money20.txt").read()
-Money27 = open("Accounts1/Money21.txt").read()
-Money28 = open("Accounts1/Money22.txt").read()
-Money29 = open("Accounts1/Money23.txt").read()
-Money30 = open("Accounts1/Money24.txt").read()
+Money25 = open("Accounts1/Money25.txt").read()
+Money26 = open("Accounts1/Money26.txt").read()
+Money27 = open("Accounts1/Money27.txt").read()
+Money28 = open("Accounts1/Money28.txt").read()
+Money29 = open("Accounts1/Money29.txt").read()
+Money30 = open("Accounts1/Money30.txt").read()
 
 while True:
     Choice1 = input('''Would you like to see the balance of a student (B),
@@ -182,7 +182,7 @@ deposit money (D) or withdraw money (W)? ''')
             file.write(str(Money28))
             file.close()
             print(open("Accounts1/Money28.txt").read())
-        elif Choice2 == '23':
+        elif Choice2 == '29':
             file = open('Accounts1/Money29.txt', 'w')
             file.write(str(Money29))
             file.close()
