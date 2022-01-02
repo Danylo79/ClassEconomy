@@ -57,38 +57,6 @@ elif level == 'v':
   elif Class == '7-12' or Class == '712':
     import viewtwelve
 
-def openJson(folder, name, password, homeroom, studentId, isComittee):
-  if (not name == "NULL"):
-    file = os.path.join(folder, "data/" + name + "-" + str(homeroom) + "-" + str(studentId) + ".json");
-
-    if (not os.path.isfile(file)):
-      makeJson(file, name, password, homeroom, studentId, isComittee);
-
-    with open(file) as readfile:
-      out = json.load(readfile)
-      debug("Loading: " + out["name"]);
-      debug("Full Json: " + json.dumps(out));
-      debug(" ")
-      return out
-  else:
-    debug("Skipping null user (" + str(homeroom) + "-" + str(studentId) + ")")
-  debug(" ")
-
-
-def makeJson(file, name, password, homeroom, studentId, isComittee):
-  data = {
-    "name": name,
-    "password": password,
-    "homeroom": homeroom,
-    "studentId": studentId,
-    "balance": 0,
-    "isComittee": isComittee,
-    "jobs": []
-    }
-
-  with open(file, "w+") as outfile:
-    json.dump(data, outfile)
-
 def debug(msg):
   if (shouldDebug):
     print(msg);
