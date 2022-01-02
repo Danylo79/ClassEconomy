@@ -13,7 +13,7 @@ const routes: Routes = [{
   component: PagesComponent,
   children: [
     {
-      path: 'dashboard',
+      path: 'ecdashboard',
       component: CeDashboardComponent,
     },
     {

@@ -4,7 +4,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Dashboard',
     icon: 'grid-outline',
-    link: '/pages/dashboard',
+    link: '/pages/ecdashboard',
     home: true,
   },
   {
@@ -14,18 +14,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
+    title: 'NGX THINGS',
+    group: true,
+  },
+  {
     title: 'E-commerce',
-    icon: 'shopping-cart-outline',
     link: '/pages/dashboard',
   },
   {
     title: 'IoT Dashboard',
-    icon: 'home-outline',
     link: '/pages/iot-dashboard',
-  },
-  {
-    title: 'FEATURES',
-    group: true,
   },
   {
     title: 'Layout',

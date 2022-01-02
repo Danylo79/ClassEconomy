@@ -32,7 +32,6 @@ import { FormsModule } from '@angular/forms';
     NgxEchartsModule,
   ],
   declarations: [
-    
   ],
 })
 export class ProfileModule { }
