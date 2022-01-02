@@ -14,6 +14,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { FormsModule } from '@angular/forms';
+import { CeBannerComponent } from './banner/ce-banner.component';
+import { CeDashboardComponent } from './ce-dashboard.component';
 
 @NgModule({
   imports: [
@@ -32,6 +34,8 @@ import { FormsModule } from '@angular/forms';
     NgxEchartsModule,
   ],
   declarations: [
+    CeDashboardComponent,
+    CeBannerComponent
   ],
 })
 export class CeDashboardModule { }

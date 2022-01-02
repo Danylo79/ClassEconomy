@@ -6,14 +6,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 import { ProfileComponent } from './profile/profile.component';
-import { CeDashboardComponent } from './ce-dashboard/ce.dashboard.component';
+import { CeDashboardComponent } from './ce-dashboard/ce-dashboard.component';
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [
     {
-      path: 'ecdashboard',
+      path: 'cedashboard',
       component: CeDashboardComponent,
     },
     {
