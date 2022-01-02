@@ -1,5 +1,3 @@
-import json
-
 Money1 = open("Accounts2/Money1.txt").read()
 Money2 = open("Accounts2/Money2.txt").read()
 Money3 = open("Accounts2/Money3.txt").read()
